@@ -48,9 +48,12 @@ add.addEventListener("click", (e) => {
     todoItem.addEventListener("animationend", (e) => {
       // remove from localStorage
       let text = todoItem.children[0].innerText;
+      let date = todoItem.children[1].innerText;
       let myListArray = JSON.parse(localStorage.getItem("list"));
       myListArray.forEach((item, index) => {
-        if (item.todoText == text) {
+        // compair both of todoText and todoDate
+        let item_date = `${item.todoMonth}/${item.todoDate}`;
+        if (item.todoText == text && item_date == date) {
           myListArray.splice(index, 1);
           localStorage.setItem("list", JSON.stringify(myListArray));
         }
@@ -127,9 +130,12 @@ function loadDate() {
         todoItem.addEventListener("animationend", (e) => {
           // remove from localStorage
           let text = todoItem.children[0].innerText;
+          let date = todoItem.children[1].innerText;
           let myListArray = JSON.parse(localStorage.getItem("list"));
           myListArray.forEach((item, index) => {
-            if (item.todoText == text) {
+            // compair both of todoText and todoDate
+            let item_date = `${item.todoMonth}/${item.todoDate}`;
+            if (item.todoText == text && item_date == date) {
               myListArray.splice(index, 1);
               localStorage.setItem("list", JSON.stringify(myListArray));
             }
