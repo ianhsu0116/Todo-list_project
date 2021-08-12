@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 25vh;
+    h1 {
+      color: white;
+      font-size: 3rem;
+    }
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    input,
+    button {
+      margin: 0rem 0.15rem;
+      padding: 0.5rem;
+      border: none;
+      font-size: 1.75rem;
+    }
+
+    input[type="text"] {
+      border-radius: 10px 0px 0px 10px;
+      text-align: center;
+    }
+
+    input[type="number"] {
+      width: 50px;
+      text-align: center;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    button {
+      background-color: rgb(196, 196, 196);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-radius: 0px 10px 10px 0px;
+      &:hover {
+        background-color: whitesmoke;
+      }
+    }
+  }
+  div.sort {
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 1.25rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1.75rem;
+      background-color: rgb(196, 196, 196);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        background-color: whitesmoke;
+      }
+    }
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+    div.todo {
+      display: flex;
+      p {
+        margin: 0.25rem 0.15rem;
+        padding: 0.5rem;
+        border: none;
+        font-size: 1.75rem;
+        background-color: whitesmoke;
+        color: black;
+      }
+
+      p.todo-text {
+        border-radius: 10px 0px 0px 10px;
+        width: 300px;
+        text-align: center;
+      }
+
+      p.todo-time {
+        border-radius: 0px 10px 10px 0px;
+        width: 70px;
+        text-align: center;
+      }
+
+      .greenButton,
+      .redButton {
+        margin: 0.25rem 0.15rem;
+        padding: 0.5rem;
+        border: none;
+        font-size: 1.75rem;
+        color: whitesmoke;
+        cursor: pointer;
+      }
+
+      .greenButton {
+        background-color: green;
+        border-radius: 10px 0px 0px 10px;
+      }
+
+      .redButton {
+        width: 2.75rem;
+        background-color: red;
+        border-radius: 0px 10px 10px 0px;
+      }
+    }
+  }
+}
+
+.done {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+  opacity: 0.5;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}

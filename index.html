@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="Zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="auther" content="XiangYen(Ian) Hsu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follorw" />
+    <meta name="rating" content="General" />
+    <base target="_target" />
+    <meta name="description" content="Ian's Todo List" />
+    <title>Ian's Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" href="" />
+  </head>
+  <body>
+    <header>
+      <h1>Ian's Todo List <i class="fas fa-check"></i></h1>
+    </header>
+
+    <form>
+      <input type="text" />
+      <input type="number" min="1" max="12" placeholder="M" required />
+      <input type="number" min="1" max="31" placeholder="D" required />
+      <button type="submit">Add Into List</button>
+    </form>
+
+    <div class="sort">
+      <button>Sort By time</button>
+    </div>
+
+    <section></section>
+  </body>
+  <script src="./app.js"></script>
+</html>
