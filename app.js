@@ -169,7 +169,7 @@ function mergeTime(arr1, arr2) {
       if (Number(arr1[i].todoDate) > Number(arr2[j].todoDate)) {
         result.push(arr2[j]);
         j++;
-      } else if (Number(arr1[i].todoDate) < Number(arr2[j].todoDate)) {
+      } else {
         result.push(arr1[i]);
         i++;
       }
